@@ -10,5 +10,8 @@ namespace Domain.Entities
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+        public string Carnet { get; set; }
+        public string Municipio { get; set; }
+        public string Departamento { get; set; }
     }
 }

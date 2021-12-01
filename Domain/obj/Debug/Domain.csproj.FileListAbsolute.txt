@@ -1,0 +1,6 @@
+E:\Desktop\Examen2Prog1\Domain\bin\Debug\Domain.dll
+E:\Desktop\Examen2Prog1\Domain\bin\Debug\Domain.pdb
+E:\Desktop\Examen2Prog1\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+E:\Desktop\Examen2Prog1\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+E:\Desktop\Examen2Prog1\Domain\obj\Debug\Domain.dll
+E:\Desktop\Examen2Prog1\Domain\obj\Debug\Domain.pdb

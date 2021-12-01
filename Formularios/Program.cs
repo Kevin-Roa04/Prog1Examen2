@@ -1,4 +1,10 @@
-﻿using Autofac;
+﻿using AppCore.Interfaces;
+using AppCore.Services;
+using Autofac;
+using Domain.Entities;
+using Domain.Interfaces;
+using Formularios.Formulario;
+using Infrastructure.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,15 +21,19 @@ namespace Formularios
         [STAThread]
         static void Main()
         {
-            //var builder = new ContainerBuilder();
+            var builder = new ContainerBuilder();
 
-            //builder.RegisterType<ObjetoRepository>().As<IObjetoRespository>();
-            //builder.RegisterType<ObjetoService>().As<IObjetoService>();
+            builder.RegisterType<EstudianteRepository>().As<IModel<Estudiante>>();
+            builder.RegisterType<EstudianteService>().As<IService<Estudiante>>();
 
-            //var container = builder.build();
+            builder.RegisterType<NotaRepository>().As<IModel<Nota>>();
+            builder.RegisterType<NotaService>().As<IService<Nota>>();
+
+            var container = builder.Build();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Formulario(container.Resolve<IObjetoService>()));
+            Application.Run(new Form1(container.Resolve<IService<Estudiante>>(), container.Resolve<IService<Nota>>()));
         }
     }
 }
